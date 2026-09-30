@@ -50,7 +50,6 @@ class KmartAUSpider(Spider):
     name = "kmart_au"
     item_attributes = {"brand": "Kmart", "brand_wikidata": "Q6421682", "country": "AU"}
     allowed_domains = ["api.kmart.com.au"]
-    requires_proxy = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
