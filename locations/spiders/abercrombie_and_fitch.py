@@ -20,7 +20,6 @@ class AbercrombieAndFitchSpider(JSONBlobSpider):
     locations_key = "physicalStores"
     # robots.txt disallows /api/*, which is the only path serving store data.
     custom_settings = {"ROBOTSTXT_OBEY": False}
-    requires_proxy = True
 
     def pre_process_data(self, location: dict) -> None:
         location["street_address"] = location.pop("addressLine")[0]
