@@ -15,7 +15,6 @@ class PrintempsSpider(PlaywrightSpider):
     allowed_domains = ["www.printemps.com"]
     start_urls = ["https://www.printemps.com/ajax/get-stores?location="]
     custom_settings = DEFAULT_PLAYWRIGHT_SETTINGS | {"ROBOTSTXT_OBEY": False}
-    requires_proxy = True
 
     def parse(self, response: TextResponse) -> Iterable[Feature]:
         for location in response.json()["magasins_lists"]:
