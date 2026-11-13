@@ -31,7 +31,6 @@ class LowesUSSpider(Spider):
     # as Lowe's Outlet, which has no Wikidata item of its own to carry.
     allowed_domains = ["lowes.com"]
     custom_settings = {"USER_AGENT": FIREFOX_LATEST}
-    requires_proxy = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
